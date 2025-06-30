@@ -1,0 +1,33 @@
+-- Consultas útiles para verificar que los datos se insertaron correctamente
+
+-- Ver todos los estudiantes registrados
+SELECT 'ESTUDIANTES REGISTRADOS:' as Tipo;
+SELECT ID_Estudiante, Nombre, Apellido, DNI, FechaNacimiento FROM Estudiantes ORDER BY Apellido, Nombre;
+
+-- Ver todas las materias disponibles
+SELECT 'MATERIAS DISPONIBLES:' as Tipo;
+SELECT ID_Materia, NombreMateria FROM Materias ORDER BY NombreMateria;
+
+-- Ver un resumen de notas por estudiante (esta es la consulta más interesante)
+SELECT 'RESUMEN DE NOTAS POR ESTUDIANTE:' as Tipo;
+SELECT 
+    e.Nombre + ' ' + e.Apellido as 'Estudiante',
+    m.NombreMateria as 'Materia',
+    n.Calificacion as 'Nota',
+    n.TipoEvaluacion as 'Tipo',
+    n.FechaEvaluacion as 'Fecha'
+FROM Notas n
+INNER JOIN Estudiantes e ON n.ID_Estudiante = e.ID_Estudiante
+INNER JOIN Materias m ON n.ID_Materia = m.ID_Materia
+ORDER BY e.Apellido, e.Nombre, m.NombreMateria;
+
+-- Consulta para ver el promedio de cada estudiante
+SELECT 'PROMEDIOS POR ESTUDIANTE:' as Tipo;
+SELECT 
+    e.Nombre + ' ' + e.Apellido as 'Estudiante',
+    ROUND(AVG(n.Calificacion), 2) as 'Promedio General',
+    COUNT(n.ID_Nota) as 'Total de Notas'
+FROM Estudiantes e
+INNER JOIN Notas n ON e.ID_Estudiante = n.ID_Estudiante
+GROUP BY e.ID_Estudiante, e.Nombre, e.Apellido
+ORDER BY AVG(n.Calificacion) DESC;

@@ -1,0 +1,39 @@
+-- Crear la base de datos principal
+CREATE DATABASE SistemaEscolar;
+GO
+
+-- Usar la base de datos recién creada
+USE SistemaEscolar;
+GO
+
+-- Tabla para almacenar información de los estudiantes
+CREATE TABLE Estudiantes (
+    ID_Estudiante INT PRIMARY KEY IDENTITY(1,1),
+    Nombre NVARCHAR(50) NOT NULL,
+    Apellido NVARCHAR(50) NOT NULL,
+    DNI NVARCHAR(20) UNIQUE NOT NULL,
+    FechaNacimiento DATE,
+);
+
+-- Tabla para las materias/asignaturas
+CREATE TABLE Materias (
+    ID_Materia INT PRIMARY KEY IDENTITY(1,1),
+    NombreMateria NVARCHAR(100) NOT NULL,
+);
+
+-- Tabla central para las notas
+CREATE TABLE Notas (
+    ID_Nota INT PRIMARY KEY IDENTITY(1,1),
+    ID_Estudiante INT NOT NULL,
+    ID_Materia INT NOT NULL,
+    Calificacion DECIMAL(4,2) NOT NULL,
+    TipoEvaluacion NVARCHAR(50),
+    FechaEvaluacion DATE NOT NULL,
+
+    -- Claves foráneas
+    FOREIGN KEY (ID_Estudiante) REFERENCES Estudiantes(ID_Estudiante),
+    FOREIGN KEY (ID_Materia) REFERENCES Materias(ID_Materia),
+
+    -- Restricción
+    CHECK (Calificacion >= 0 AND Calificacion <= 10)
+);

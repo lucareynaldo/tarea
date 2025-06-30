@@ -1,0 +1,14 @@
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\bin\Debug\SistemaNotasEscolar.exe.config
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\bin\Debug\SistemaNotasEscolar.exe
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\bin\Debug\SistemaNotasEscolar.pdb
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\obj\Debug\SistemaNotasEscolar.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\obj\Debug\FormNotas.resources
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\obj\Debug\FormMaterias.resources
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\obj\Debug\FormEstudiantes.resources
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\obj\Debug\Form1.resources
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\obj\Debug\SistemaNotasEscolar.Properties.Resources.resources
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\obj\Debug\SistemaNotasEscolar.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\obj\Debug\SistemaNotasEscolar.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\obj\Debug\SistemaNotasEscolar.exe
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\obj\Debug\SistemaNotasEscolar.pdb
+C:\Users\Usuario\source\repos\SistemaNotasEscolar\SistemaNotasEscolar\obj\Debug\SistemaNotasEscolar.exe.config
